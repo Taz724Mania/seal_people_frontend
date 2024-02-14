@@ -1,0 +1,35 @@
+//variable in sass start with a dollar sign and can be used at anytime
+$maincolor: black;  
+
+
+// mixins are a collections of rules that can be applied 
+@mixin orange-black-letters {
+    background-color: $maincolor;
+    color: orange;
+    border: 1px solid orange
+}
+
+
+//to use mixins, use the @include keyword followed by the name of the mixin
+h1{
+    @include orange-black-letters;
+}
+
+div{
+    h2{
+        background-color: #ffcd74;
+    }
+}
+
+div{
+    input{
+        font-size: 15px;
+        background-color: #ff7251;
+        &[type='submit']{
+            background-color: #9b2948;
+            &:hover{
+                background-color: #ff7251;
+            }
+        }
+    }
+}
